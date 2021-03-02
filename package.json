@@ -1,0 +1,15 @@
+{
+  "name": "node-heroku",
+  "version": "1.0.0",
+  "description": "Node App hosted on Heroku",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Rolando Rodriguez",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}

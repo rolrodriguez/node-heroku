@@ -26,12 +26,13 @@
     
     btn.onclick = (e)=>{
       e.preventDefault();
+      let result = document.querySelector('#result');
       let op1 = document.querySelector('#op1').value;
       let op2 = document.querySelector('#op2').value;
       let oper = document.querySelector('#operation').value;
       let res = fetch(`/math_service?op1=${op1}&op2=${op2}&operation=${oper}`)
       .then(response => response.json())
-      .then(data => console.log(data));
+      .then(data => result.innerHTML = data.result);
     }
   </script>
 </body>

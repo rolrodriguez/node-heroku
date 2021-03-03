@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Submission Form</h1>
+  <form action="/math" method="GET">
+  <input type="text" name="op1" id="op1" placeholder="op1">
+  <input type="text" name="op2" id="op2" placeholder="op2">
+  <select name="operation" id="operation">
+    <option value="add">Add</option>
+    <option value="sub">Sub</option>
+    <option value="mul">Mul</option>
+    <option value="div">Div</option>
+  </select>
+  <input type="submit" value="Submit">
+  <button id="ajax">AJAX</button>
+  </form>
+  <div id="result"></div>
+  <script>
+    let btn = document.querySelector('#ajax');
+    
+    btn.onclick = (e)=>{
+      e.preventDefault();
+      let op1 = document.querySelector('#op1').value;
+      let op2 = document.querySelector('#op2').value;
+      let oper = document.querySelector('#operation').value;
+      let res = fetch(`/math_service?op1=${op1}&op2=${op2}&operation=${oper}`)
+      .then(response => response.json())
+      .then(data => console.log(data));
+    }
+  </script>
+</body>
+</html>

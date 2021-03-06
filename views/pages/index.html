@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USPS Rate Calculator</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+  <h1 class="center">USPS Rate Calculator</h1>
+    <form action="/getRate" method="GET">
+      <div id="inputElements">
+        <label for="weight">Weight not over (oz):</label>
+        <input type="number" name="weight" id="weight" step="0.1" required placeholder="YY.Y oz">
+        <label for="">Type of Mail: </label>
+        <select name="mail" id="mail">
+          <option value="letters_stamped">Letters - Stamped</option>
+          <option value="letters_metered">Letters - letters-metered</option>
+          <option value="large_envelopes_flats">Large envelopes - flats</option>
+          <option value="first_class_package_service">First Class Package Service - Parcels </option>
+        </select>
+      </div>
+      <input type="submit" value="Calculate">
+    </form>
+  </div>
+<script src="/js/main.js"></script>
+</body>
+</html>

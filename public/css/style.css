@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+:root{
+  --colors-primary: navy;
+  --colors-focus: orange;
+}
+
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: inherit;
+  padding: inherit;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#362ecc+0,737096+0,000080+100 */
+  background: #362ecc; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #362ecc 0%, #737096 0%, #000080 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #362ecc 0%,#737096 0%,#000080 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #362ecc 0%,#737096 0%,#000080 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#362ecc', endColorstr='#000080',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+.center{
+  text-align: center;
+}
+
+#inputElements{
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+form input[type="submit"]{
+  padding: 1rem 1.7rem;
+  margin: 2rem auto;
+  background-color: var(--colors-primary);
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+form input[type="submit"]:hover{
+  background-color: var(--colors-focus);
+  color: black;
+}
+
+form label{
+  font-size: 1.6rem;
+  color: rgb(102, 101, 101);
+}
+
+form *{
+  margin: 1rem;
+  font-family: 'Open Sans', sans-serif;
+}
+.container{
+  max-width: 76rem;
+  width: 95%;
+  margin: auto;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+h1{
+  font-size: 2.8rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: var(--colors-primary);
+}
+.result{
+  text-align: center;
+  font-size: 2.8rem;
+}
+
+.weight{
+  font-size: 3.8rem;
+  color: var(--colors-focus);
+}
+.cost{
+  font-size: 4.5rem;
+  color: var(--colors-primary);
+}
+a:visited, a{
+  text-decoration: none;
+  color: var(--colors-primary);
+  font-size: 2rem;
+}
+a:hover{
+  color: var(--colors-focus);
+}

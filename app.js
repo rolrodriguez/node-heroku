@@ -17,7 +17,7 @@ function getZoneFromMiles(miles) {
   else if (miles <= 1000) result = 5;
   else if (miles <= 1400) result = 6;
   else if (miles <= 1800) result = 7;
-  else if (miles >= 1800) result = 8;
+  else if (miles > 1800) result = 8;
   return result;
 }
 
@@ -86,6 +86,7 @@ app.get('/getRate', (req, res) => {
               console.log("Distance: " + dist);
               var zone = getZoneFromMiles(dist);
               var index = Math.ceil(Number(weight)) <= 0 ? 1 : Math.ceil(Number(weight)) - 1;
+              if (index > 12) index = 12;
               console.log(DB['parcel service'][zone][index]);
               var cost = Number(DB['parcel service'][zone][index]).toFixed(2);
               res.render('pages/rates', { weight: weight.toFixed(1), mailType, cost });
